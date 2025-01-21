@@ -50,7 +50,6 @@ For this lab, you will
 \begin{enumerate}[1.]\itemsep0em
 \item Install \href{https://cran.rstudio.com}{R} and \href{https://posit.co/download/rstudio-desktop/}{RStudio}
 \item Install tinytex (if necessary):
-
 {\tt{install.packages("tinytex")}}
 \item Create a Github account \href{https://github.com/}{here}, and email me your username.
 \item Install \href{https://github.com/apps/desktop}{GitHub Desktop}.
@@ -96,6 +95,54 @@ We can write a lettered list in Sweave.
 This part of the midterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration. 
 
 \subsection{Typing Mathematical Equations}
+\noindent We can write a one line equation that is centered like this
+\[\widehat{y_i} = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i.\]
+\noindent This can be written in the test, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i$ using as well.
+When we need to show mulitple steps, we can create a multi-line equation that is centered like this
+\begin{align*}
+8(x-5)+x&=9(x-5)+5 \\
+8x-40+x&=9x-45+5 \tag{Distribution)} \\
+9x-40&=9x-40 \tag{Combining like terms} \\
+9x&=9x \tag{adding 40 to both sides} \\
+x&=x \tag{Dividing bohth sides by 9} \\
+\end{align*}
+
+\noindent The equality holds for any x.
+
+Note, I did a page break here so that the next section started on a clean page. \newpage
+
+\subsection{Running R Code}
+Code chunks can be entered into Sweave; e.g., here are some comments
+<<size="scriptsize">>=
+# R code goes here
+# Output is automatically printed in the pdf
+@
+
+Below, you can see that we can do algebra with R.
+<<size="scriptsize">>=
+8*(9-5) + 9 # 8(x-5) + x for x=9
+@
+
+Below, we show we can produce the code without evaluating it. 
+<<eval=FALSE, size="scriptsize">>=
+8*(9-5) + 9 # 8(x-5) + x for x=9
+@
+
+Alternatively, we can proudce the output without the code. 
+<<echo=FALSE, size="scriptsize">>=
+8*(9-5) + 9 # 8(x-5) + x for x=9
+@
+
+We can also call object values from R directly.
+<<size="scriptsize">>=
+result<- 8*(9-5)+9 # 8(x-5)+x for x=9
+result.with.error<- result + rnorm(1, mean=0, sd=0.1)
+result.with.error
+@
+
+The result is \Sexpr{result.with.error}. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+
+\subsection{Plotting}
 
 
 \section{Results}

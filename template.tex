@@ -147,6 +147,80 @@ We can write a lettered list in Sweave.
 This part of the midterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration. 
 
 \subsection{Typing Mathematical Equations}
+\noindent We can write a one line equation that is centered like this
+\[\widehat{y_i} = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i.\]
+\noindent This can be written in the test, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i$ using as well.
+When we need to show mulitple steps, we can create a multi-line equation that is centered like this
+\begin{align*}
+8(x-5)+x&=9(x-5)+5 \\
+8x-40+x&=9x-45+5 \tag{Distribution)} \\
+9x-40&=9x-40 \tag{Combining like terms} \\
+9x&=9x \tag{adding 40 to both sides} \\
+x&=x \tag{Dividing bohth sides by 9} \\
+\end{align*}
+
+\noindent The equality holds for any x.
+
+Note, I did a page break here so that the next section started on a clean page. \newpage
+
+\subsection{Running R Code}
+Code chunks can be entered into Sweave; e.g., here are some comments
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# R code goes here}
+\hlcom{# Output is automatically printed in the pdf}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+Below, you can see that we can do algebra with R.
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9} \hlcom{# 8(x-5) + x for x=9}
+\end{alltt}
+\begin{verbatim}
+## [1] 41
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Below, we show we can produce the code without evaluating it. 
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9} \hlcom{# 8(x-5) + x for x=9}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+Alternatively, we can proudce the output without the code. 
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## [1] 41
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+We can also call object values from R directly.
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{result}\hlkwb{<-} \hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)}\hlopt{+}\hlnum{9} \hlcom{# 8(x-5)+x for x=9}
+\hldef{result.with.error}\hlkwb{<-} \hldef{result} \hlopt{+} \hlkwd{rnorm}\hldef{(}\hlnum{1}\hldef{,} \hlkwc{mean}\hldef{=}\hlnum{0}\hldef{,} \hlkwc{sd}\hldef{=}\hlnum{0.1}\hldef{)}
+\hldef{result.with.error}
+\end{alltt}
+\begin{verbatim}
+## [1] 40.94362
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+The result is 40.9436159. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+
+\subsection{Plotting}
 
 
 \section{Results}
