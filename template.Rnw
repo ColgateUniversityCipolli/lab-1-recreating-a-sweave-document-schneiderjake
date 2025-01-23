@@ -100,6 +100,7 @@ This part of the midterm is due Sunday November 14 by 5p. I will not accept late
 \noindent We can write a one line equation that is centered like this
 \[\widehat{y_i} = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i.\]
 \noindent This can be written in the test, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i$ using as well.
+
 When we need to show mulitple steps, we can create a multi-line equation that is centered like this
 \begin{align*}
 8(x-5)+x&=9(x-5)+5 \\
@@ -164,7 +165,7 @@ hist(rexp(100))
 \columnbreak
 
 \subsection{tables}
-\noindent Below, we can load and take a peek at some data about the death rates per 1000 in Virgina in 1940 \citep{VADeaths}.
+\noindent  Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 \citep{VADeaths}.
 
 <<size="scriptsize">>=
 data(VADeaths)
@@ -179,11 +180,9 @@ sleep.table<-xtable(VADeaths ,
                     label = "VADeaths.tab", 
                     caption = "Death Rates per 1000 in Virginia (1940)")
 @
-
 <<echo=FALSE, results="asis">>=
 print(sleep.table, table.placement = "H" , include.rowname=FALSE , size="small")
 @
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -204,26 +203,25 @@ Below is a table from a paper I'm currently working on. Without the analysis obj
 
  \begin{table}[H]
  \begin{center}
- \begin{tabular}{|l|cc|cc|cc|cc|}\hline
- & \multicolumn{2}{|c}{Control} & \multicolumn{2}{|c|}{L-Hyoscyamine} &
- \multicolumn{2}{|c|}{L-Hyoscine} & \multicolumn{2}{|c|}{R-Hyoscine}\\\hline
- Patient& \#Obs&HrsSleep& \#Obs&HrsSleep& \#Obs&HrsSleep& \#Obs&HrsSleep \\\hline
- 1&9&0.6&6&1.3&6&2.5&6&2.1\\
- 2&9&3.0&6&1.4&6&3.8&6&4.4\\
- 3&8&4.7&6&4.5&6&5.8&6&4.7\\
- 4&9&5.5&3&4.3&3&5.6&3&4.8\\
- 5&9&6.2&3&6.1&3&6.1&3&6.7\\
- 6&8&3.2&4&6.6&3&7.6&3&8.3\\
- 7&8&2.5&3&6.2&3&8.0&3&8.2\\
- 8&7&2.8&6&3.6&6&4.4&5&4.3\\
- 9&8&1.1&5&1.1&6&5.7&5&5.8\\
- 10&9&29&5&4.9&5&6.3&6&6.4\\
- 11&--&-- &2&6.3&2&6.8&2&7.3\\\hline
- \end{tabular} \label{full.sleep.tab}
+ \begin{tabular}{l cc cc cc cc cc}\hline
+ 
+ Term& SS(Type III)&  df&  F&  p-value&  $\epsilon_p^2$\\\hline
+ 
+ (Intercept)&4.95&1.00&5.37&\phantom{$>$}0.0209\\
+ White-Poor (Z)&3.17&1.00&3.44&\phantom{$>$}0.0642&0.02\\
+ Zero-Sum (Z)&17.96&1.00&19.48&$>$0.0001&0.03\\
+ Education (Z)&0.39&1.00&0.42&\phantom{$>$}0.5161&0.00\\
+ Income (Z)&0.16&1.00&0.17&\phantom{$>$}0.6817&0.00\\
+ Democrat&9.60&1.00&10.42&\phantom{$>$}0.0013&0.02\\
+ Black-Poor (Z)&1.92&1.00&2.08&\phantom{$>$}0.1496&0.00\\
+ White-Poor (Z)xZero-Sum (Z)&7.96&1.00&8.63&\phantom{$>$}0.0034&0.01\\
+ Residuals&506.92&550.00\\\hline
+ \end{tabular} \label{ANOVA table}
+ \caption{ANOVA table for Case Study 1.}
  \end{center}
  \end{table}
 
-%just need to finish the table
+
 
 The palmerpenguins package for R \citep{penguins} provides data on adult foraging penguins near Palmer Station, Antartica. Figure \ref{plot3} is too big to fit nicely in our column-based-template above, so I've placed it here in the abstractby saving it and presenting it scaled to 0.75.
 
