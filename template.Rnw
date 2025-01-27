@@ -54,7 +54,7 @@ For this lab, you will
 {\tt{install.packages("tinytex")}}
 \item Create a Github account \href{https://github.com/}{here}, and email me your username.
 \item Install \href{https://github.com/apps/desktop}{GitHub Desktop}.
-\item Accept the LAB 1 assignment \href{https://github.com/apps/desktop}{here}
+\item Accept the LAB 1 assignment \href{https://classroom.github.com/assignment-invitations/49ec7c38806e92bfef8bf3094b9b11d3}{here}
 \item Recreate this document (except put your name/info at the top) to get used to writing in \LaTeX~ and to see the types of things we can do when creating a document to convey statistical information. Make sure to commit and push your work using GitHub desktop as you finish each section.
 \end{enumerate}
 
