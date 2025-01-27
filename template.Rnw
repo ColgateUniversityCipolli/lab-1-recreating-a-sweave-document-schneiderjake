@@ -203,21 +203,21 @@ Below is a table from a paper I'm currently working on. Without the analysis obj
 
  \begin{table}[H]
  \begin{center}
- \begin{tabular}{l cc cc cc cc cc}\hline
+ \begin{tabular}{l r r r r r}\hline
  
  Term& SS(Type III)&  df&  F&  p-value&  $\epsilon_p^2$\\\hline
  
- (Intercept)&4.95&1.00&5.37&\phantom{$>$}0.0209\\
- White-Poor (Z)&3.17&1.00&3.44&\phantom{$>$}0.0642&0.02\\
- Zero-Sum (Z)&17.96&1.00&19.48&$>$0.0001&0.03\\
- Education (Z)&0.39&1.00&0.42&\phantom{$>$}0.5161&0.00\\
- Income (Z)&0.16&1.00&0.17&\phantom{$>$}0.6817&0.00\\
- Democrat&9.60&1.00&10.42&\phantom{$>$}0.0013&0.02\\
- Black-Poor (Z)&1.92&1.00&2.08&\phantom{$>$}0.1496&0.00\\
- White-Poor (Z)xZero-Sum (Z)&7.96&1.00&8.63&\phantom{$>$}0.0034&0.01\\
+ (Intercept)&4.95&1.00&5.37&0.0209\\
+ White-Poor (Z)&3.17&1.00&3.44&0.0642&0.02\\
+ Zero-Sum (Z)&17.96&1.00&19.48&$<$0.0001&0.03\\
+ Education (Z)&0.39&1.00&0.42&0.5161&0.00\\
+ Income (Z)&0.16&1.00&0.17&0.6817&0.00\\
+ Democrat&9.60&1.00&10.42&0.0013&0.02\\
+ Black-Poor (Z)&1.92&1.00&2.08&0.1496&0.00\\
+ White-Poor (Z)xZero-Sum (Z)&7.96&1.00&8.63&0.0034&0.01\\
  Residuals&506.92&550.00\\\hline
  \end{tabular} \label{ANOVA table}
- \caption{ANOVA table for Case Study 1.}
+ \caption{ANOVA table for Case Study I.}
  \end{center}
  \end{table}
 
@@ -235,7 +235,7 @@ dev.off()
 \begin{figure}[H]
   \begin{center}
   \includegraphics[scale=0.8]{figure/pengiuins.pdf}
-  \caption{Data on adult foraging penguins near Palmer Station, Antartica}
+  \caption{Data on adult foraging penguins near Palmer Station, Antartica.}
   \label{plot3}
   \end{center}
 \end{figure}
