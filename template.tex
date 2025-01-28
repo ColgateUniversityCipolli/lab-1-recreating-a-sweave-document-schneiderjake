@@ -215,12 +215,12 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 41.06009
+## [1] 40.82484
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-The result is 41.0600938. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+The result is 40.8248377. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
 
 \subsection{Plotting}
 \noindent We can also plot with R.
@@ -279,7 +279,7 @@ If we want to print this nicely, we can do so using the xtable package \citep{xt
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Mon Jan 27 21:54:14 2025
+% Mon Jan 27 21:58:20 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -323,13 +323,13 @@ Below is a table from a paper I'm currently working on. Without the analysis obj
  Term& SS(Type III)&  df&  F&  p-value&  $\epsilon_p^2$\\\hline
  
  (Intercept)&4.95&1.00&5.37&0.0209\\
- White-Poor (Z)&3.17&1.00&3.44&0.0642&0.02\\
- Zero-Sum (Z)&17.96&1.00&19.48&$<$0.0001&0.03\\
- Education (Z)&0.39&1.00&0.42&0.5161&0.00\\
- Income (Z)&0.16&1.00&0.17&0.6817&0.00\\
+ White-Poor (\textit{Z})&3.17&1.00&3.44&0.0642&0.02\\
+ Zero-Sum (\textit{Z})&17.96&1.00&19.48&$<$0.0001&0.03\\
+ Education (\textit{Z})&0.39&1.00&0.42&0.5161&0.00\\
+ Income (\textit{Z})&0.16&1.00&0.17&0.6817&0.00\\
  Democrat&9.60&1.00&10.42&0.0013&0.02\\
- Black-Poor (Z)&1.92&1.00&2.08&0.1496&0.00\\
- White-Poor (Z)xZero-Sum (Z)&7.96&1.00&8.63&0.0034&0.01\\
+ Black-Poor (\textit{Z})&1.92&1.00&2.08&0.1496&0.00\\
+ White-Poor (\textit{Z})xZero-Sum (\textit{Z})&7.96&1.00&8.63&0.0034&0.01\\
  Residuals&506.92&550.00\\\hline
  \end{tabular} \label{ANOVA table}
  \caption{ANOVA table for Case Study I.}
